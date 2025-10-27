@@ -10,6 +10,6 @@ export async function handleSignIn(provider: 'github' | 'google') {
     });
   } catch (error) {
     console.error(error);
-    throw new Error(error instanceof Error ? error.message : 'An error occurred during sign in');
+    throw error;
   }
 }
